@@ -1,0 +1,51 @@
+/* styles home.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Background gradient */
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text */
+    position: relative;
+    animation: pulse 1.5s infinite; /* Add a pulsing effect */
+}
+
+/* Shadow for text */
+h1::after {
+    content: "home";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: -1;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 80px;
+}
+
+/* Animation for pulsing effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 117, 140, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 50px rgba(255, 117, 140, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 117, 140, 0.5);
+    }
+}
